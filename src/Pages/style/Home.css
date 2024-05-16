@@ -1,0 +1,56 @@
+/* Header.css */
+
+.navbar {
+    background-color: #192a56; /* Dark blue background color */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Lightning effect */
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Adjust padding as needed */
+  }
+  
+  .logo-link {
+    text-decoration: none;
+  }
+  
+  .logo {
+    height: 50px; /* Adjust logo height as needed */
+    width: auto;
+  }
+  
+  .nav-links {
+    display: flex; /* Keep items in a horizontal layout */
+    align-items: center; /* Align items vertically */
+  }
+  
+  .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display menu items horizontally */
+  }
+  
+  .nav-menu li {
+    margin-left: 20px; /* Adjust margin between menu items */
+  }
+  
+  .nav-menu li:first-child {
+    margin-left: 0; /* Remove margin for first item */
+  }
+  
+  .nav-link {
+    color: #fff; /* Text color for links */
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    color: #fbc531; /* Hover color for links */
+  }
+  
+  .active {
+    color: #fbc531; /* Active link color */
+  }
+  

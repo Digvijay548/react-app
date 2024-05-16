@@ -1,0 +1,66 @@
+.new-user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.HeaderText {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.ImageDiv {
+    width: 400px; /* Fixed width for the image container */
+    height: 300px; /* Fixed height for the image container */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures the image does not overflow the container */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f0f0f0; /* Optional: Adds a background color */
+}
+
+.GeneratedImg {
+    background-color: pink;
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; /* Adjust the height as needed */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.InputFieldsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.InputField {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Makes the input field rounded */
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+
+.GenerateButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.GenerateButton:hover {
+    background-color: #0056b3;
+}

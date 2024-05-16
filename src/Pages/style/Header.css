@@ -1,0 +1,101 @@
+/* Header.css */
+
+/* Navbar */
+.navbar {
+  background-color: #99b2f1; /* Dark blue background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  padding: 10px 20px; /* Padding for content */
+}
+
+/* Navbar Container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Items spread out horizontally */
+  align-items: center; /* Items vertically centered */
+}
+
+/* Logo Link */
+.logos-link {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Logo color */
+  font-weight: bold; /* Make the logo text bold */
+}
+
+/* Logo Image */
+.logos {
+  height: 100px;
+  width: 250px; /* Adjust logo height */
+}
+
+/* Navigation Links and Menu */
+.nav-links,
+.nav-menu {
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Vertically center items */
+}
+
+/* Individual Navigation Link */
+.nav-link {
+  color: #fff; /* Text color for links */
+  text-decoration: none; /* Remove underline */
+  margin-right: 20px; /* Spacing between links */
+  transition: color 0.3s; /* Smooth transition for color change */
+  border-radius: 20px; /* Round the corners */
+  padding: 5px 10px; /* Padding for links */
+}
+
+/* Active Link */
+.active {
+  color: #027ba7; /* Active link color */
+}
+
+/* Dropdown Content */
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9; /* Lighter background color */
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  padding: 10px; /* Padding for content */
+}
+
+/* Dropdown Content Display */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown Link */
+.dropdown-link {
+  display: block;
+  color: #000; /* Text color for dropdown links */
+  text-decoration: none; /* Remove underline */
+  padding: 8px 16px; /* Padding for dropdown links */
+  transition: background-color 0.3s; /* Smooth transition for background color change */
+  background-color: #f9f9f9; /* Lighter background color */
+}
+
+/* Dropdown Link Hover */
+.dropdown-link:hover {
+  background-color: #ddd; /* Even lighter background color on hover */
+}
+.nav-linkuser{
+  color: #fff; /* Text color for links */
+  text-decoration: none; /* Remove underline */
+  margin-right: 20px; /* Spacing between links */
+  transition: color 0.3s; /* Smooth transition for color change */
+  border-radius: 20px; /* Round the corners */
+  padding: 5px 10px; /* Padding for links */
+  font-weight: normal;
+
+}
+
+.btnclass{
+  width: 100px;
+  height: 30px;
+  font-size: 10px;
+  padding: 0%;
+  margin-left: 20px;
+  
+}

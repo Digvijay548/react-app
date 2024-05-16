@@ -1,0 +1,51 @@
+/* footer.css */
+
+.footer {
+    background-color: #99b2f1;
+    color: #fff;
+    padding: 20px 0;
+    height: 100px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-logo {
+    flex: 1;
+  }
+  .centered {
+    width: 300px; /* Adjust this to the desired width of your login form */
+    margin: 0 auto; /* Centers the login container horizontally */
+  }
+  
+  .logo {
+    height: 50px;
+    width: 100px;
+  }
+  
+  .footer-content {
+    flex: 2;
+    text-align: right;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .social-icon {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 10px;
+  }
+  
+  .social-icon:hover {
+    opacity: 0.8;
+  }
+  

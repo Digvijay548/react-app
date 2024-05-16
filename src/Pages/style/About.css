@@ -1,0 +1,46 @@
+/* About.css */
+
+.about-container {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feedback-form label {
+    font-size: 1.2em;
+  }
+  
+  .feedback-form textarea {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+  }
+  
+  .feedback-form button[type='submit'] {
+    width: 150px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    background-color: #007bff;
+    margin-top: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .thanks-msg {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #192a56;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
