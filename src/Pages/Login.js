@@ -32,7 +32,7 @@ const Login = () => {
   return (
     <div className="centered">
       <div className="login-container">
-        <h2>Login</h2>
+        <h2 className='heading-login'>Login</h2>
         {!UserLogInDone ?
           (
             <form onSubmit={handleSubmit}>
@@ -56,12 +56,14 @@ const Login = () => {
                   required
                 />
               </div>
-              <button type="submit">Login</button>
+              <button className='button-class' type="submit">Login</button>
               {errorMessage && <p className="error-message">{errorMessage}</p>}
             </form>
           ) :
           (
-            <p className="thanks-msg">You are logged In</p>
+            <div className='sucess-container'>
+            <h4>You are logged In...</h4>
+            </div>
           )}
         <div className="extra-links">
           <NavLink to="/forget-password" exact activeClassName="active" className="nav-link">Forgot password</NavLink>

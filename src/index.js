@@ -12,7 +12,6 @@ import Login from './Pages/Login';
 import NewUser from './Pages/NewUser';
 import ForgotPassword from './Pages/ForgotPassword';
 import Github,{githubInfoLoader} from './Pages/Github';
-import GenerateAiImages from './Pages/GenerateAiImages';
 
 // Step 1: Create the Context
  export const UserContext = createContext();

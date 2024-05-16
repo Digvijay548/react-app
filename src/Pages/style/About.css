@@ -1,8 +1,15 @@
 /* About.css */
 
-.about-container {
-    margin-top: 50px;
-    text-align: center;
+.about-container {  
+  width: 400px; /* Adjust this to the desired width of your login form */
+  padding: 20px;
+  background-color: #ecf0f1;
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  margin: 50px auto;
+  text-align: center;
   }
   
   .feedback-form {
@@ -12,27 +19,33 @@
   }
   
   .feedback-form label {
-    font-size: 1.2em;
+    color:#2c3e50;
+    margin-bottom: 50px;
   }
   
   .feedback-form textarea {
-    margin-top: 10px;
+    width: calc(100% - 20px);
     padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #2c3e50;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    resize: none;
+    box-sizing: border-box;
   }
   
   .feedback-form button[type='submit'] {
-    width: 150px; /* Adjust width as needed */
-    height: 40px; /* Adjust height as needed */
-    background-color: #007bff;
-    margin-top: 20px;
+    width: 100%; /* Adjust width as needed */
+    padding: 10px;
+    background-color: #a8a6e7;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
+    font-size: 16px;
     transition: background-color 0.3s ease;
+  }
+
+  .feedback-form button:hover {
+    background-color: #8481c6;
   }
   
   .thanks-msg {

@@ -9,11 +9,13 @@ export default function Github() {
 
     return (
         <>
+        <div className='Body-Div'>
         <div className='folowersdiv'><h4 className='Usernametxt'>Github UserName:</h4> <h3 className='Username'>{data.login}</h3>
             
         </div>
         <div className='ImgDiv'>
             <img src={data.avatar_url} alt="Git" width={300} />
+        </div>
         </div>
         </>
     )

@@ -1,80 +1,98 @@
 .App {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f2f2f2;
-  }
-  
-  .container {
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
-  .centered {
-    width: 300px; /* Adjust this to the desired width of your login form */
-    margin: 0 auto; /* Centers the login container horizontally */
-  }
-  
-  h2 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  input[type='text'],
-  input[type='password'],
-  input[type='email'] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .error-message {
-    color: #ff0000;
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .extra-links {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .extra-links a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .extra-links a:hover {
-    text-decoration: underline;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.user-container {
+  width: 320px; /* Adjust this to the desired width of your login form */
+  padding: 20px;
+  background-color: #ecf0f1;
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  margin: 50px auto;
+  text-align: center;
+}
+.user-container input[type="text"],
+.user-container input[type="password"],
+.user-container input[type='email'] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #2c3e50;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.user-container h2 {
+  color:#2c3e50;
+  margin-bottom: 50px;
+}
+.user-container label {
+  color:#2c3e50;
+  margin-bottom: 10px;
+}
+
+.centered {
+  width: 450px; /* Adjust this to the desired width of your login form */
+  margin: 0 auto; /* Centers the login container horizontally */
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+
+
+
+.user-container button {
+  width: 100%; /* Adjust width as needed */
+  padding: 10px;
+  background-color: #a8a6e7;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.user-container button:hover {
+  background-color: #8481c6;
+}
+
+.error-message {
+  color: #ff0000;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.extra-links {
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.extra-links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}

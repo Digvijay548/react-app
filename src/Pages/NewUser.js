@@ -1,6 +1,7 @@
 import React,{useContext,useState} from 'react';
-import {NavLink } from 'react-router-dom';
+import {NavLink ,useNavigate} from 'react-router-dom';
 import { UserContext } from '../index.js'; 
+import './style/NewUser.css';
 
 
 const NewUser = () => {
@@ -9,6 +10,8 @@ const NewUser = () => {
     const [ password,Setpassword ] = useState("");
     const [ submitted,Setsubmitted ] = useState(false);
     const { setUser } = useContext(UserContext);
+
+    const navigate = useNavigate();
     
     
     const Usernamechanged=(e)=>{
@@ -35,12 +38,13 @@ const NewUser = () => {
     console.log(email)
     console.log(username)
     console.log(password)
+    navigate('/login')
 
     }
 
     return (
-        <div className="new-user-container centered">
-            <div className="new-user-container">
+        <div className="centered">
+            <div className="user-container">
                 <h2>New User Registration</h2>
                 {!submitted ? (
                 <form onSubmit={handleSubmit} >

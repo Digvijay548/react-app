@@ -12,11 +12,12 @@
     text-align: center;
     flex: 1;
     margin-top: 10px;
+    margin-bottom: 10px;
   }
 
  .Usernametxt {
     font-size: large;
-    color: rgb(158, 69, 241);
+    color: #2c3e50;
     font-family: 'Times New Roman', Times, serif;
     margin-bottom: 10px; /* Add some space below the h4 */
 }
@@ -24,8 +25,8 @@
 .Username {
     padding: 10px;
     border-radius: 20px;
-    background-color: rgba(174, 63, 214, 0.862);
-    color: rgb(19, 18, 19);
+    background-color: #a8a6e7;
+    color:#2c3e50;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: larger;
     font-weight: bold;

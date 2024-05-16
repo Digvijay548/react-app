@@ -9,10 +9,40 @@
 .login-container {
   width: 320px; /* Adjust this to the desired width of your login form */
   padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ecf0f1;
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
+  margin: 50px auto;
+  text-align: center;
+}
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #2c3e50;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.sucess-container{
+  background-color: #ecf0f1;
+
+}
+.sucess-container h4 {
+  color:#2c3e50;
+  margin-bottom: 50px;
+}
+
+.login-container h2 {
+  color:#2c3e50;
+  margin-bottom: 50px;
+}
+.login-container label {
+  color:#2c3e50;
+  margin-bottom: 10px;
 }
 
 .centered {
@@ -44,19 +74,21 @@ input[type='email'] {
   border-radius: 3px;
 }
 
-button {
+
+.login-container button {
   width: 100%; /* Adjust width as needed */
   padding: 10px;
-  background-color: #007bff;
+  background-color: #a8a6e7;
   color: #fff;
   border: none;
-  border-radius: 3px;
+  border-radius: 20px;
   cursor: pointer;
+  font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #0056b3;
+.login-container button:hover {
+  background-color: #8481c6;
 }
 
 .error-message {

@@ -15,21 +15,18 @@
     margin: 0 auto;
   }
   
-  .footer-logo {
-    flex: 1;
-  }
-  .centered {
+    .centered {
     width: 300px; /* Adjust this to the desired width of your login form */
     margin: 0 auto; /* Centers the login container horizontally */
   }
   
   .logo {
     height: 50px;
-    width: 100px;
+    width: auto;
   }
   
   .footer-content {
-    flex: 2;
+    flex: 1;
     text-align: right;
   }
   
@@ -48,4 +45,11 @@
   .social-icon:hover {
     opacity: 0.8;
   }
-  
+  .StayConnected{
+    margin-right: 20px;
+    display: inline-block;
+  }
+  .copyrigths{
+    text-align: left;
+    display: flex;
+  }

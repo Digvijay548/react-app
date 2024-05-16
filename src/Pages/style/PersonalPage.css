@@ -1,0 +1,42 @@
+
+.Main-PersonalPage{ 
+    background-image:url('./HomeBg.jpg');
+    background-size: cover; /* Ensures the background image covers the entire container */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-position: center; /* Centers the background image */
+    min-height: 500px;
+    align-items: center;
+  }
+    .contentStyle{
+      padding-top: 150px;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .contentStyle h1{    
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    }
+    .contentStyle p{    
+      display: block;
+      margin-bottom: 5px;
+      color: #fff;
+      }
+      .contentStyle button {
+        margin-top: 20px;
+        width: 150px; /* Adjust width as needed */
+        padding: 10px;
+        background-color: #a8a6e7;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .contentStyle button:hover {
+        background-color: #8481c6;
+      }
+      
