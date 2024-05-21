@@ -15,7 +15,7 @@ const ForgotPassword = () => {
                     <button type="submit">Reset Password</button>
                 </form>
                 <div className="extra-links">
-                    <NavLink to="/login" exact activeClassName="active" className="nav-link">go back</NavLink>
+                    <NavLink to="/login" exact activeclassname="active" className="nav-link">go back</NavLink>
                 </div>
             </div>
         </div>

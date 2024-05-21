@@ -1,69 +1,127 @@
-// Header.js
-import React, { useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { UserContext } from '../index.js'
-import './style/Header.css'; // Import CSS file
+import { useDispatch, useSelector } from 'react-redux';
+import authService from '../appwrite/auth.js';
+import { logout, login } from '../store/authSlice.js';
+import Swal from 'sweetalert2';
 
 export default function Header() {
-    function LogOut(){
-        setUser("")
-        setIsUserLoggedIn(false)      
+  const isLoggedIn = useSelector((state) => state.auth.status);
+  const dispatch = useDispatch();
+  const [loading, setLoading] = useState(true);
 
-    }
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const userData = await authService.getCurrentUser();
+        if (userData) {
+          dispatch(login({ user: userData }));
+        } else {
+          dispatch(logout());
+        }
+      } catch (error) {
+        console.error("Error in fetching data:", error);
+        dispatch(logout());
+      } finally {
+        setLoading(false);
+      }
+    };
 
+    fetchData();
+  }, [dispatch]);
 
-    const { IsUserLoggedIn, user,setUser,setIsUserLoggedIn } = useContext(UserContext);
-    console.log(IsUserLoggedIn)
-    return (
-        <header className="navbar">
-            <nav>
-                <div className="navbar-container">
-                    <Link to="/" className="logo-link">
-                        <img
-                            src="https://www.brandbucket.com/sites/default/files/logo_uploads/462074/large_logophoria.png"
-                            alt="Logos"
-                            className="logo"
-                        />
-                    </Link>
-                    <div className="nav-links">
+  const handleLogout = async () => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You want to log out!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, log out!'
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          await authService.logout();
+          dispatch(logout());
+          Swal.fire(
+            'Logged out!',
+            'You have been logged out.',
+            'success'
+          );
+        } catch (error) {
+          console.error("Error during logout:", error);
+          Swal.fire(
+            'Error!',
+            'There was an error logging out.',
+            'error'
+          );
+        }
+      }
+    });
+  };
 
-                        <NavLink to="/" exact activeClassName="active" className="nav-link">
-                            Home
-                        </NavLink>
-                        <NavLink to="/getstart" activeClassName="active" className="nav-link">
-                            Get started
-                        </NavLink>
-                        <NavLink to="/github" activeClassName="active" className="nav-link">
-                            Github
-                        </NavLink>
-                        <NavLink to="/about" activeClassName="active" className="nav-link dropdown">
-                            About
-                            <div className="dropdown-content">
-                                <NavLink to="/about/ComapnyPage" className="dropdown-link">Company Site</NavLink>
-                                <NavLink to="/about/PersonalPage" className="dropdown-link">Personal Site</NavLink>
-                            </div>
-                        </NavLink>
-                        <NavLink to="/contact" activeClassName="active" className="nav-link">
-                            Contact
-                        </NavLink>
-
-                        {!IsUserLoggedIn ? (
-                            <NavLink to="/login" activeClassName="active" className="nav-link">
-                                Log in
-                            </NavLink>) : (
-                            <h5 className='nav-linkuser dropdown'>Welcome : {user.username}
-                                <div className="dropdown-content">
-
-                                    <button onClick={LogOut} className='btnclass'>Log Out</button>
-                                </div>
-
-                            </h5>
-                        )}
-
-                    </div>
-
-                </div>
-            </nav>
-        </header>
-    );
+  return (
+    <header className="bg-blue-300 h-16 flex">
+      <div className='bg-blue-300 w-20 flex-1 text-cyan-100 flex justify-between items-center'>
+        <Link to="/">
+          <img className='w-28'
+            src="https://www.brandbucket.com/sites/default/files/logo_uploads/462074/large_logophoria.png"
+            alt="Logos"
+          />
+        </Link>
+      </div>
+      <nav className='flex'>
+        <div className='flex items-center justify-center gap-2'>
+          <div className="flex items-center justify-center h-12 w-24">
+            <NavLink to="/" exact activeclassname="text-black" className="text-white w-40 flex items-center justify-center h-10 rounded-full hover:bg-blue-200 hover:text-black">
+              Home
+            </NavLink>
+          </div>
+          <div className="flex items-center justify-center h-12 w-24 ml-auto">
+            <NavLink to="/github" activeclassname="text-black" className="text-white w-40 flex items-center justify-center h-10 rounded-full hover:bg-blue-200 hover:text-black">
+              Github
+            </NavLink>
+          </div>
+          <div className="flex items-center justify-center h-12 w-24 ml-auto">
+            <NavLink to="/about" activeclassname="text-black" className="text-white w-40 flex items-center justify-center h-10 rounded-full hover:bg-blue-200 hover:text-black">
+              About
+            </NavLink>
+          </div>
+          <div className="flex items-center justify-center h-12 w-24 ml-auto">
+            <NavLink to="/contact" activeclassname="text-black" className="text-white w-40 flex items-center justify-center h-10 rounded-full hover:bg-blue-200 hover:text-black">
+              Contact
+            </NavLink>
+          </div>
+          
+            {isLoggedIn &&
+            <div className="flex items-center justify-center h-12 w-24 ml-auto">
+              <NavLink to="/AllPost" activeclassname="text-black" className="text-white w-40 flex items-center justify-center h-10 rounded-full hover:bg-blue-200 hover:text-black">
+              All Post
+            </NavLink>
+             </div>
+            }
+         
+          {isLoggedIn &&
+          <div className="flex items-center justify-center h-12 w-24 ml-auto ">            
+              <NavLink to="/FileUpload" activeclassname="text-black" className="text-white w-40 flex items-center justify-center h-10 rounded-full hover:bg-blue-200 hover:text-black">
+              File Upload
+            </NavLink>            
+          </div>
+        }
+          <div className="flex items-center justify-center h-12 w-24 ml-auto mr-10">
+            {isLoggedIn ? (
+              <button onClick={handleLogout} className="text-white w-40 flex items-center justify-center h-10 rounded-full hover:bg-blue-200 hover:text-black">
+                Logout
+              </button>
+            ) : (
+              <NavLink to="/login" activeclassname="text-black" className="text-white w-40 flex items-center justify-center h-10 rounded-full hover:bg-blue-200 hover:text-black">
+                Login
+              </NavLink>
+            )}
+          </div>
+        </div>
+      </nav>
+    </header>
+  );
 }
