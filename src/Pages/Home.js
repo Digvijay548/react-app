@@ -20,7 +20,7 @@ const Home = () => {
         const userData = await authService.getCurrentUser();
         if (userData) {
           setUserDetails(userData)
-          dispatch(login({ user: userData }));
+          dispatch(login({ userData: userData }));
         } else {
           dispatch(logout());
         }
@@ -96,7 +96,7 @@ const Home = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     centerMode: true,
     nextArrow: <NextArrow />,

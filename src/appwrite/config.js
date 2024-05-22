@@ -89,6 +89,20 @@ export class Service {
             return false;
         }
     }
+    async fetchAllItems ()  {
+        try {
+          const documents = await this.databases.listDocuments(
+            conf.appwriteDatatbaseId,
+             conf.appwriteCollectionId);
+
+          console.log(documents);
+          return documents;
+
+        } catch (error) {
+          console.error('Error fetching documents:', error);
+          return [];
+        }
+      };
 
     async GetAllUserPost(queries = [Query.equal("Email", "admin@gmail.com")]) {
         try {
@@ -138,7 +152,6 @@ export class Service {
                 conf.appwriteBucketSId,
                 fileId
             );
-            console.log("Url => ******" + url);
             return url;
         } catch (error) {
             console.log("error in getFilePreview: " + error);
