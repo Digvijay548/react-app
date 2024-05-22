@@ -60,7 +60,7 @@ const AllPost = () => {
 
     const NextArrow = ({ onClick }) => (
         <div
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 text-white rounded-full p-2 cursor-pointer transition-transform duration-300 ease-in-out hover:bg-black hover:bg-opacity-15 hover:scale-110"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 text-white rounded-full p-2 cursor-pointer transition-transform duration-300 ease-in-out hover:bg-black hover:bg-opacity-20 hover:scale-110"
             onClick={onClick}
         >
             <svg
@@ -77,7 +77,7 @@ const AllPost = () => {
 
     const PrevArrow = ({ onClick }) => (
         <div
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10  text-white rounded-full p-2 cursor-pointer transition-transform duration-300 ease-in-out hover:bg-gray-700 hover:scale-110"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 text-white rounded-full p-2 cursor-pointer transition-transform duration-300 ease-in-out hover:bg-black hover:bg-opacity-20 hover:scale-110"
             onClick={onClick}
         >
             <svg
@@ -99,7 +99,7 @@ const AllPost = () => {
         slidesToShow: 3,
         slidesToScroll: 2,
         centerMode: true,
-        centerPadding: '30px',
+        centerPadding: '10px',
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
         responsive: [

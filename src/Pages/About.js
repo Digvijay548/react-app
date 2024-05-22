@@ -1,7 +1,6 @@
 // About.js
 
 import React, { useState,useContext } from 'react';
-import { UserContext } from '../index.js'; 
 
 const About = () => {
   const [feedback, setFeedback] = useState('');
